@@ -36,7 +36,7 @@ A minimal example to create a segmentation could look like this:
 If you use PACKAGE_NAME in your research, please cite it to support the development!
 
 ```
-TODO: citation will be added asap
+TODO: https://arxiv.org/abs/2205.10355
 ```
 
 ## Contributing
