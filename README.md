@@ -7,13 +7,12 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <!-- [![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation) -->
 
-Description 
-## Features
-
+Quality prediction for brain tumor segmentation.  
+Can be used to estimate the quality of a segmentation during evaluation or as part of a loss function during model training.
 
 ## Installation
 
-With a Python 3.8+ environment, you can install `deep_quality_estimation` directly from [PyPI](https://pypi.org/project/deep_quality_estimation/):
+With a Python 3.9+ environment, you can install `deep_quality_estimation` directly from [PyPI](https://pypi.org/project/deep_quality_estimation/):
 
 ```bash
 pip install deep_quality_estimation
@@ -22,21 +21,36 @@ pip install deep_quality_estimation
 
 ## Use Cases and Tutorials
 
-A minimal example to create a segmentation could look like this:
+A minimal example to predict the quality of a segmentation could look like this:
 
 ```python
-    # example
-```
+    from deep_quality_estimation import DQE
 
-<!-- For more examples and details please refer to our extensive Notebook tutorials here [NBViewer](https://nbviewer.org/github/BrainLesion/tutorials/blob/main/deep_quality_estimation/tutorial.ipynb) ([GitHub](https://github.com/BrainLesion/tutorials/blob/main/deep_quality_estimation/tutorial.ipynb)). For the best experience open the notebook in Colab. -->
+    # shown parameters are default values but can be adapted to usecase
+    dqe = DQE(device="cuda", cuda_devices="0") 
+
+    # inputs can be Paths (str or pathlib.Path object), NumPy NDArrays or a mix
+    mean_score, scores_per_view = dqe.predict(
+        t1c="t1c.nii.gz", t1="t1.nii.gz", t2="t2.nii.gz", flair="flair.nii.gz", segmentation="segmentation.nii.gz"
+    )
+```
 
 
 ## Citation
 
 If you use deep_quality_estimation in your research, please cite it to support the development!
 
+https://arxiv.org/abs/2205.10355
 ```
-TODO: https://arxiv.org/abs/2205.10355
+@misc{kofler2022deepqualityestimationcreating,
+      title={Deep Quality Estimation: Creating Surrogate Models for Human Quality Ratings}, 
+      author={Florian Kofler and Ivan Ezhov and Lucas Fidon and Izabela Horvath and Ezequiel de la Rosa and John LaMaster and Hongwei Li and Tom Finck and Suprosanna Shit and Johannes Paetzold and Spyridon Bakas and Marie Piraud and Jan Kirschke and Tom Vercauteren and Claus Zimmer and Benedikt Wiestler and Bjoern Menze},
+      year={2022},
+      eprint={2205.10355},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2205.10355}, 
+}
 ```
 
 ## Contributing
