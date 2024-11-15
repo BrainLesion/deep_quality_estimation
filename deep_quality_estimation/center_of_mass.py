@@ -23,8 +23,10 @@ def compute_center_of_mass(
     Returns:
         List[int]: List of the center of mass coordinates
     """
-    if isinstance(segmentation, Path):
+    if isinstance(segmentation, Path) or isinstance(segmentation, str):
         segmentation = nib.load(segmentation).get_fdata()
+
+    assert isinstance(segmentation, np.ndarray)
 
     mask = np.zeros(segmentation.shape)
 
@@ -59,8 +61,10 @@ def get_center_of_mass_slices(
     Returns:
         Dict[View, NDArray]: Dictionary with the views as keys and the 2D image slices as values
     """
-    if isinstance(image, Path):
+    if isinstance(image, Path) or isinstance(image, str):
         image = nib.load(image).get_fdata()
+
+    assert isinstance(image, np.ndarray)
 
     return {
         View.AXIAL: image[:, :, center_of_mass[2]],
