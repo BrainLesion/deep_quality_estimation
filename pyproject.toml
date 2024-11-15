@@ -31,6 +31,7 @@ scipy = [
 numpy = ">=1.21.2"
 torch = "^2.5.1"
 monai = "^1.4.0"
+loguru = "^0.7.2"
 
 
 [tool.poetry.dev-dependencies]
