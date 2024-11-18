@@ -6,9 +6,7 @@ from monai.data import Dataset, pad_list_data_collate
 from monai.transforms import (
     Compose,
     ConcatItemsd,
-    ConvertToMultiChannelBasedOnBratsClassesd,
     Lambdad,
-    LoadImageD,
     ScaleIntensityRangePercentilesd,
     SpatialPadd,
     ToTensord,
@@ -21,6 +19,9 @@ from deep_quality_estimation.center_of_mass import (
     get_center_of_mass_slices,
 )
 from deep_quality_estimation.enums import View
+from deep_quality_estimation.transforms import (
+    CustomConvertToMultiChannelBasedOnBratsClassesd,
+)
 
 
 class DataHandler:
@@ -64,9 +65,7 @@ class DataHandler:
         transforms = Compose(
             [
                 Lambdad(self.ALL_CHANNELS, np.nan_to_num),
-                ConvertToMultiChannelBasedOnBratsClassesd(
-                    keys=self.ONLY_LABELS
-                ),  # TODO: adapt this for changed labels?
+                CustomConvertToMultiChannelBasedOnBratsClassesd(keys=self.ONLY_LABELS),
                 ScaleIntensityRangePercentilesd(
                     keys=self.ONLY_IMAGES,
                     lower=0.5,
