@@ -17,7 +17,7 @@ class CustomConvertToMultiChannelBasedOnBratsClasses(Transform):
     Convert labels to multi channels based on brats18 classes:
     label 1 is the necrotic and non-enhancing tumor core
     label 2 is the peritumoral edema
-    label 4 is the GD-enhancing tumor
+    label 3 is the GD-enhancing tumor (used to be label 4 in older datasets)
     The possible classes are TC (Tumor core), WT (Whole tumor)
     and ET (Enhancing tumor).
     """

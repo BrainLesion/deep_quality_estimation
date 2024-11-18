@@ -10,6 +10,9 @@
 Quality prediction for brain tumor segmentation.  
 Can be used to estimate the quality of a segmentation during evaluation or as part of a loss function during model training.
 
+> [!NOTE]  
+> This package expects images in atlas space and segementation labels in brats style, i.e. label 1 is the necrotic and non-enhancing tumor core, label 2 is the peritumoral edema, label 3 is the GD-enhancing tumor (used to be label 4 in older datasets)
+
 ## Installation
 
 With a Python 3.9+ environment, you can install `deep_quality_estimation` directly from [PyPI](https://pypi.org/project/deep_quality_estimation/):
