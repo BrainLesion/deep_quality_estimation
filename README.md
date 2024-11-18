@@ -11,7 +11,7 @@ Quality prediction for brain tumor segmentation.
 Can be used to estimate the quality of a segmentation during evaluation or as part of a loss function during model training.
 
 > [!NOTE]  
-> This package expects images in atlas space and segementation labels in brats style, i.e. label 1 is the necrotic and non-enhancing tumor core, label 2 is the peritumoral edema, label 3 is the GD-enhancing tumor (used to be label 4 in older datasets)
+> This package expects images in atlas space and segementation labels in brats style, i.e. label 1 is the necrotic and non-enhancing tumor core, label 2 is the peritumoral edema, label 3 is the GD-enhancing tumor (used to be label 4 in older datasets, both are supported)
 
 ## Installation
 
