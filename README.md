@@ -30,19 +30,19 @@ pip install deep_quality_estimation
 A minimal example to predict the quality of a segmentation could look like this:
 
 ```python
-    from deep_quality_estimation import DQE
+from deep_quality_estimation import DQE
 
-    # shown parameters are default values but can be adapted to usecase
-    dqe = DQE(device="cuda", cuda_devices="0") 
+# shown parameters are default values but can be adapted to usecase
+dqe = DQE(device="cuda", cuda_devices="0") 
 
-    # inputs can be Paths (str or pathlib.Path object), NumPy NDArrays or a mix
-    mean_score, scores_per_view = dqe.predict(
-        t1c="t1c.nii.gz",
-        t1="t1.nii.gz",
-        t2="t2.nii.gz",
-        flair="flair.nii.gz",
-        segmentation="segmentation.nii.gz",
-    )
+# inputs can be Paths (str or pathlib.Path object), NumPy NDArrays or a mix
+mean_score, scores_per_view = dqe.predict(
+    t1c="t1c.nii.gz",
+    t1="t1.nii.gz",
+    t2="t2.nii.gz",
+    flair="flair.nii.gz",
+    segmentation="segmentation.nii.gz",
+)
 ```
 
 
