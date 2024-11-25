@@ -37,7 +37,11 @@ A minimal example to predict the quality of a segmentation could look like this:
 
     # inputs can be Paths (str or pathlib.Path object), NumPy NDArrays or a mix
     mean_score, scores_per_view = dqe.predict(
-        t1c="t1c.nii.gz", t1="t1.nii.gz", t2="t2.nii.gz", flair="flair.nii.gz", segmentation="segmentation.nii.gz"
+        t1c="t1c.nii.gz",
+        t1="t1.nii.gz",
+        t2="t2.nii.gz",
+        flair="flair.nii.gz",
+        segmentation="segmentation.nii.gz",
     )
 ```
 
