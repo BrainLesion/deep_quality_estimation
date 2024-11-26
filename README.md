@@ -8,7 +8,7 @@
 <!-- [![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation) -->
 
 Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; to 6 stars &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50; inspyred by the paper [**Deep Quality Estimation: Creating Surrogate Models for Human Quality Ratings**](https://arxiv.org/abs/2205.10355).  
-Can be used to estimate the quality of a segmentation for evaluation purposes or as e.g. as part of a loss function during model training.
+This can be used to estimate the quality of a BraTS glioma segmentation for evaluation purposes or as e.g. as part of a loss function during model training.
 
 > [!NOTE]  
 > This package expects images in atlas space and segmentation labels in brats style, i.e.
