@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <!-- [![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation) -->
 
-Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; to 6 stars &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50; inspyred by the paper [**Deep Quality Estimation: Creating Surrogate Models for Human Quality Ratings**](https://arxiv.org/abs/2205.10355).  
+Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; star to 6  &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50; stars inspyred by the paper [**Deep Quality Estimation: Creating Surrogate Models for Human Quality Ratings**](https://arxiv.org/abs/2205.10355).  
 This can be used to estimate the quality of a BraTS glioma segmentation for evaluation purposes or as e.g. as part of a loss function during model training.
 
 > [!NOTE]  
