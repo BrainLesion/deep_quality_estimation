@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <!-- [![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation) -->
 
-Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; to 6 stars &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;.  
+Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; to 6 stars &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50; inspyred by the paper [**Deep Quality Estimation: Creating Surrogate Models for Human Quality Ratings**](https://arxiv.org/abs/2205.10355).  
 Can be used to estimate the quality of a segmentation for evaluation purposes or as e.g. as part of a loss function during model training.
 
 > [!NOTE]  
@@ -15,6 +15,11 @@ Can be used to estimate the quality of a segmentation for evaluation purposes or
 > - `label 1` is the necrotic and non-enhancing tumor core
 > - `label 2` is the peritumoral edema
 > - `label 3` is the GD-enhancing tumor (used to be `label 4` in older data, both are supported)
+
+
+> [!NOTE]
+The model here is not the original model presented in the paper. Instead it is trained on the individual radiologists' ratings. This way the model has a chance to learn the variance between radioligsts' estimates. It outperforms the model presented in the paper on the test set.
+
 
 ## Installation
 
