@@ -8,7 +8,7 @@ from loguru import logger
 from monai.networks.nets import DenseNet121
 from numpy.typing import NDArray
 
-from deep_quality_estimation.dataloader import DataHandler
+from deep_quality_estimation.data_handler import DataHandler
 from deep_quality_estimation.enums import View
 
 PACKAGE_DIR = Path(__file__).parent
