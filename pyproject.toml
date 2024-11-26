@@ -6,21 +6,32 @@ build-backend = "poetry_dynamic_versioning.backend"
 enable = true
 
 [tool.poetry]
-name = "package_name"
+name = "deep_quality_estimation"
 version = "0.0.0"
 description = ""
-authors = ["Florian Kofler <florian.kofler@tum.de>"]
-repository = "https://www.TODO.com"
-homepage = "https://www.TODO.com"
+authors = [
+    "Marcel Rosier <marcel.rosier@tum.de>, Florian Kofler <florian.kofler@tum.de>",
+]
+repository = "https://github.com/BrainLesion/deep_quality_estimation"
+homepage = "https://github.com/BrainLesion/deep_quality_estimation"
 documentation = "https://www.TODO.com"
 readme = "README.md"
 
 
 # Add the exclude field directly under [tool.poetry]
-exclude = ["examples", "benchmark"]
+exclude = ["examples", "benchmark", "tests", "docs"]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
+nibabel = "^5.3.2"
+scipy = [
+    { version = "^1.14.1", python = ">=3.10" },
+    { version = "<1.14", python = "<3.10" },
+]
+numpy = ">=1.21.2"
+torch = "^2.5.1"
+monai = "^1.4.0"
+loguru = "^0.7.2"
 
 
 [tool.poetry.dev-dependencies]
@@ -34,5 +45,5 @@ optional = true
 [tool.poetry.group.docs.dependencies]
 Sphinx = ">=7.0.0"
 sphinx-copybutton = ">=0.5.2"
-furo = ">=2024.8.6"
+pydata-sphinx-theme = ">=0.16.0"
 myst-parser = ">=2.0.0"
