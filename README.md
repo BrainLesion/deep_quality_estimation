@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <!-- [![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation) -->
 
-Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; to 6 stars &#x2B50;.  
+Quality prediction for brain tumor segmentation on scale ranging from 1 &#x2B50; to 6 stars &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;.  
 Can be used to estimate the quality of a segmentation for evaluation purposes or as e.g. as part of a loss function during model training.
 
 > [!NOTE]  
