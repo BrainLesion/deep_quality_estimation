@@ -43,7 +43,7 @@ html_theme_options = {
     "github_url": "https://github.com/BrainLesion/deep_quality_estimation",
 }
 # html_static_path = ["_static"]
-autodoc_mock_imports = ['torch', 'monai']  # Mock imports to avoid dependency issues
+autodoc_mock_imports = ["torch", "monai"]  # Mock imports to avoid dependency issues
 autodoc_default_options = {
     "members": True,
     "undoc-members": True,
