@@ -18,7 +18,10 @@ This can be used to estimate the quality of a BraTS glioma segmentation for eval
 
 
 > [!NOTE]
-The model here is not the original model presented in the paper. Instead, it is trained based on individual radiologists' ratings. This way, the model has a chance to learn the variance between radiologists' estimates. It outperforms the model presented in the paper on the test set.
+The model in this package differs from the one presented in the paper. Instead, it is trained based on individual radiologists' ratings. This way, the model can learn the variance between radiologists' estimates. It outperforms the model presented in the paper on the test set.
+
+> [!NOTE]
+The model is biased to overestimate segmentation quality as it was mainly trained on high-quality segmentations and was exposed to only a few bad samples.
 
 
 ## Installation
