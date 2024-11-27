@@ -8,7 +8,7 @@ import sys
 from subprocess import run
 
 
-sys.path.insert(0, os.path.abspath("../../"))
+sys.path.insert(0, os.path.abspath("../.."))
 
 
 run(["python", "preprocess_readme.py"])
@@ -16,7 +16,7 @@ run(["python", "preprocess_readme.py"])
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "PACKAGE_NAME"
+project = "Deep Quality Estimation"
 copyright = "2024, Marcel Rosier et al."
 author = "Marcel Rosier, Florian Kofler"
 
@@ -38,9 +38,12 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "pydata-sphinx-theme"
+html_theme = "pydata_sphinx_theme"
+html_theme_options = {
+    "github_url": "https://github.com/BrainLesion/deep_quality_estimation",
+}
 # html_static_path = ["_static"]
-
+autodoc_mock_imports = ["torch", "monai"]  # Mock imports to avoid dependency issues
 autodoc_default_options = {
     "members": True,
     "undoc-members": True,
