@@ -39,7 +39,7 @@ jobs:
       # TODO adapt package_name to the name of your package
       - name: Test with pytest
         run: |
-          python -m poetry run pytest --cov package_name
+          python -m poetry run pytest --cov deep_quality_estimation --cov-report=xml
       # Add the following block to upload coverage to Codecov, requires a CODECOV_TOKEN secret to be set in the repository
       # - name: Upload results to Codecov
       #   # Only upload to Codecov after a merge to the main branch
