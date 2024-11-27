@@ -4,8 +4,8 @@
 [![Stable Version](https://img.shields.io/pypi/v/deep_quality_estimation?label=stable)](https://pypi.python.org/pypi/deep_quality_estimation/)
 [![Documentation Status](https://readthedocs.org/projects/deep_quality_estimation/badge/?version=latest)](http://deep_quality_estimation.readthedocs.io/?badge=latest)
 [![tests](https://github.com/BrainLesion/deep_quality_estimation/actions/workflows/tests.yml/badge.svg)](https://github.com/BrainLesion/deep_quality_estimation/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-<!-- [![codecov](https://codecov.io/gh/BrainLesion/deep_quality_estimation/graph/badge.svg?token=A7FWUKO9Y4)](https://codecov.io/gh/BrainLesion/deep_quality_estimation) -->
 
 Quality prediction for brain tumor segmentation on a scale ranging from &#x2B50; 1 star to  &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50; 6 stars inspired by the paper [**Deep Quality Estimation: Creating Surrogate Models for Human Quality Ratings**](https://arxiv.org/abs/2205.10355).  <br>
 This can be used to estimate the quality of a BraTS glioma segmentation for evaluation purposes or, e.g., as part of a loss function during model training.
